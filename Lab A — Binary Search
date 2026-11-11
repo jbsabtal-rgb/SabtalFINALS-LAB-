@@ -1,0 +1,30 @@
+public class cc103act {
+
+	public static void main(String[] args) {
+	
+        int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+
+        int target = 5;
+
+        int left = 0;
+        int right = numbers.length - 1;
+
+        while (left <= right) {
+
+            int middle = (left + right) / 2;
+
+            if (numbers[middle] == target) {
+                System.out.println("Found at index: " + middle);
+                break;
+            }
+            else if (numbers[middle] < target) {
+                left = middle + 1;
+            }
+            else {
+                right = middle - 1;
+            }
+        }
+  
+	}
+
+}
